@@ -55,13 +55,14 @@
 \frametitle{LHCb experiment (1)}
 \begin{itemize}
   \item One of the four largest experiments in Large Hadron Collider (LHC)
+  \item 843 members, from 60 institutes in 16 Countries
 \end{itemize}
 \begin{columns}[t]
 \column{.5\textwidth}
 \includegraphics[width=\textwidth]{images/lhcb.png}
 \column{.5\textwidth}
 \includegraphics[width=\textwidth]{images/det.png}\\~\\
-Single arm forward spectrometer.
+Forward spectrometer.
 \end{columns}
 
 % ----------------------------------------------------------------------------
@@ -70,7 +71,7 @@ Single arm forward spectrometer.
 \begin{frame}
 % ----------------------------------------------------------------------------
 \frametitle{LHCb experiment (2)}
-Core physics program is a searching for NEW physics wich Charm and Beaty particles.
+Core physics program is a searching for NEW physics with Charm and Beauty particles.
 \begin{columns}[c]
 \column{.5\textwidth}
 \begin{alertblock}{Hot result (November 2012)}
@@ -82,15 +83,15 @@ Consistent with Standard Model
 \includegraphics[width=\textwidth]{images/bs.png}
 \end{columns}
 \begin{itemize}
- \item Many experiments were trying to find this decay for the last 10 year.
- \item LHCb is the first who observe it!
+ \item Many experiments have been looking for this decay in the last 10 years.
+ \item LHCb is the first to observe it!
 \end{itemize}
 % ----------------------------------------------------------------------------
 \end{frame}
 % ============================================================================
 \begin{frame}
 % ----------------------------------------------------------------------------
-\frametitle{My research B}
+\frametitle{My research}
 \begin{enumerate}
     \item Trigger software profiling. \textcolor{green}{DONE}
     \item Study of $\chi_{b}$ production. \textcolor{blue}{IN PROGRESS}
@@ -110,15 +111,27 @@ Consistent with Standard Model
 
 \begin{frame}
 \frametitle{Trigger software profiling}
-\includegraphics[width=\textwidth]{images/hlt_struct.png}\\~\\
-Software trigger (HLT1 \& HLT2):
+\begin{columns}[c]
+\column{.4\textwidth}
+\includegraphics[width=.9\textwidth]{images/hlt_struct1.png}\\~\\
+\textcolor{red}{The trigger needs fast algorithms!}
+\column{.6\textwidth}
+Most experiments require a trigger in order to record interesting events at suitable rate.
 \begin{itemize}
-  \item 100 man/years work that runs only 30ms for 1 event.
-  \item 30K CPUs or 1700 servers.
+  \item L0 Hardware Trigger $40 MHz \rightarrow 1 MHz$. Search for high pt, $\mu$, e, $\gamma$, hadron candidates.
+  \item High Level Software Trigger Farm
+  \begin{itemize}
+    \item HLT1: Add Impact parameter cuts
+    \item HLT2: Global event reconstruction.
+  \end{itemize}
+\end{itemize}
+\begin{itemize}
+  \item 100 man/years work that has only 20-30 ms to process an average event.
+  \item 29K CPUs or 1700 servers.
   \item $2 \times 10^{15}$ bytes stored in 2012.
 \end{itemize}
-\textcolor{red}{The trigger needs fast algorithms!}
 % \includegraphics[width=.8\textwidth]{images/moore.png}
+\end{columns}
 \end{frame}
 \subsection{Profiler Auditor}
 \begin{frame}
@@ -140,17 +153,17 @@ CPU profiler tool is vital for trigger optimization.\\~\\
 \end{frame}
 
 \begin{frame}
-\frametitle{Trigger hotspot}
+\frametitle{Example of trigger hotspot}
 \includegraphics[width=.7\textwidth]{images/hlt.png}\\~\\
 \begin{itemize}
-  \item Hotspot was founded.
-  \item Solution allows to decrease CPU consumption by 5\%.
+  \item Hotspot was found.
+  \item Allows to decrease CPU consumption by 5\%.
 \end{itemize}
 \end{frame}
 \begin{frame}
 \frametitle{CHEP2012: Talk and Paper}
-The work was presented on "Computing in High Energy and Nuclear Physics" conference.
-The largest of the conferenes in this area. The conference is held  2 times per 18 months.
+This work was presented on "Computing in High Energy and Nuclear Physics" conference.
+The largest of the conferenes in this area. The conference is held every 18 months.
 \begin{columns}[l]
 \column{.4\textwidth}
 \includegraphics[height=.6\textheight]{images/chep.png}
@@ -170,23 +183,24 @@ The largest of the conferenes in this area. The conference is held  2 times per 
 \end{frame}
 % =============================================================================
 \begin{frame}
-Optimizing the LHCb trigger is crucial in many measurement. Pariculary for
-decays with muons can be triggered on
-with \textbf{unprecedented high efficiency}.
+Optimizing the LHCb trigger is crucial in many measurement. In particular,
+decays with muons can be triggered on with \textbf{unprecedented high efficiency} ($\sim$80\%).
 \begin{columns}[c]
 \column{.5\textwidth}
 \includegraphics[width=\textwidth]{images/mumu.png}
 \column{.5\textwidth}
+The dimuon trigger:
+
 \begin{itemize}
-  \item Dimuon trigger is not prescaled.
-  \item In more than 50\% of LHCb's papers the dimuon trigger is used.
+  \item is not prescaled.
+  \item is used in more than 50\% of LHCb's papers.
 \end{itemize}
 \end{columns}
 \end{frame}
 % =============================================================================
 \begin{frame}
 \frametitle{Motivation and Plan}
-$b\bar{b}$ system, which can be produced in different spin configurations, is ideal laboratory for QCD tests. It's like a hydrogen atom for QCD.
+$b\bar{b}$ system, which can be produced in different spin configurations, is ideal laboratory for QCD tests. It's like a hydrogen atom in QCD.
 \begin{columns}[c]
 \column{.3\textwidth}
 \includegraphics[width=\textwidth]{images/bfamily.png}
@@ -198,7 +212,7 @@ $b\bar{b}$ system, which can be produced in different spin configurations, is id
 States with parallel quark spins (S=1):
 \begin{itemize}
   \item S-wave $\Upsilon$ state.
-  \item P-wave $\chi_{b}$ states, composed by 3 spin states $\chi_{b(1,2,3)}$. Can be readily produced in the $\Upsilon \gamma$ decays.
+  \item P-wave $\chi_{b}$ states, composed by 3 spin states $\chi_{b(1,2,3)}$. Can be readily produced in the radiactive decays of $\Upsilon$.
   \item $\chi_{b}(3P)$ state recently observed by ATLAS, D0 and LHCb.
 \end{itemize}
 Study of $\chi_{b}$ production:
@@ -212,36 +226,38 @@ Study of $\chi_{b}$ production:
 \subsection{Cross sections}
 \begin{frame}
 \frametitle{Cross sections formula}
-In each $p_T(\Upsilon)$ bin:
+In each $p_T(\Upsilon)$ bin calculate:
 \begin{center}
-$\frac{\sigma(\chi_{b} \rightarrow \Upsilon \gamma)}{\sigma(\Upsilon)} = \frac{N_{\chi_b \rightarrow \Upsilon \gamma}}{N_{\Upsilon}} \times \frac{\epsilon_{\Upsilon}}{\epsilon_{\chi_b \rightarrow \Upsilon \gamma}} = \frac{1}{\epsilon_{\gamma}}$
+$\frac{\sigma(\chi_{b} \rightarrow \Upsilon \gamma)}{\sigma(\Upsilon)} = \frac{N_{\chi_b \rightarrow \Upsilon \gamma}}{N_{\Upsilon}} \times \frac{\epsilon_{\Upsilon}}{\epsilon_{\chi_b \rightarrow \Upsilon \gamma}} = \frac{N_{\chi_b \rightarrow \Upsilon \gamma}}{N_{\Upsilon}} \times \frac{1}{\epsilon_{\gamma}^{reco}}$
 \end{center}
 \begin{itemize}
-  \item $\epsilon$ --- from Monte-Carlo simulation
-  \item N --- from fits for $m(\mu^+ \mu^-)$ and $m(\mu^+ \mu^- \gamma) - m(\mu^+ \mu^-)$
-  \item Luminosity = $1015 \pm 35 pb^{-1}$, data collected in 2011 year.
+  \item Calculate for each $\Upsilon(nS), n=1,2,3$ and $\chi_b(mP), m=1,2,3$
+  \item Get N from fits: $N_{\Upsilon}$ from  $m(\mu^+ \mu^-)$ and $N_{\chi_b \rightarrow \Upsilon \gamma}$ from [$m(\mu^+ \mu^- \gamma) - m(\mu^+ \mu^-)$] (for better resolution)
+  \item Compute efficiency $\epsilon$  from Monte-Carlo simulation
+  \item Luminosity = $1015 \pm 35 pb^{-1}$, data collected in year 2011.
 \end{itemize}
 \end{frame}
 
 \begin{frame}[t]
 \frametitle{Reconstruction}
-Models were built on top of RooFit toolkit and perform unbinned maximum likelihood fits.
+Models were built on top of RooFit toolkit and unbinned maximum likelihood fits were performed.
 \begin{columns}[t]
 \column{.5\textwidth}
 For $N_{\Upsilon}$:
-Invariant mass
+invariant mass
 \includegraphics[height=.35\textheight]{images/ups.png}\\~\\
 \begin{itemize}
   \item Signal: sum of 3 Crystal Ball functions
   \item Background: exponential function.
 \end{itemize}
 \column{.5\textwidth}
-For $N_{\chi_{b} \rightarrow \Upsilon(1S) \gamma}$:
-\includegraphics[height=.35\textheight]{images/fit.png}\\~\\
+For $N_{\chi_{b} \rightarrow \Upsilon(1S) \gamma}$: mass difference
+\includegraphics[height=.3\textheight]{images/fit.png}
 \begin{itemize}
   \item Signal: 3 Gauss functions
   \item Background: $\sqrt{x} \times \left[e^{- \tau x} \times (c_1+a_1x+a_2x^2)\right] + \left[e^{-\tau x} \times (c_2+a_3x+a_4x^2)\right]$
 \end{itemize}
+(not enough resolution to separate $\chi_{b(0,1,2)}$)
 \end{columns}
 \end{frame}
 
@@ -259,7 +275,7 @@ For $N_{\chi_{b} \rightarrow \Upsilon(1S) \gamma}$:
 \end{frame}
 \begin{frame}
 \frametitle{Selection optimization}
-Background substraction
+Background subtraction
 \begin{columns}[c]
 \column{.5\textwidth}
 \includegraphics[width=\textwidth]{images/splot.png}
@@ -281,8 +297,8 @@ Background substraction
 Next steps:
 
 \begin{itemize}
-  \item Check systematic errors
-  \item ECAL calibration
+  \item Determine systematic errors
+  \item Photon energy calibration
 \end{itemize}
 \end{columns}
 \begin{tabular}{|l|c|c|}\hline
@@ -290,7 +306,7 @@ Next steps:
 ATLAS         &                             & $10.530 \pm 0.0050$\\
 D0            &                             & $10.551 \pm 0.0140$\\
 LHCb (prev)   &  $10.2660 \pm 0.0060$       & $10.535 \pm 0.0100$\\ \hline
-\textcolor{blue}{This study} & $10.2709 \pm 0.0035$ & $10.515 \pm 0.0074$ \\ \hline
+\textcolor{blue}{This study} & $~~~~10.2709 \pm 0.0035_{stat}$ & $~~~~10.515 \pm 0.0074_{stat}$ \\ \hline
 % &  $10.2709 \pm 0.0035
 \end{tabular}
 \end{frame}
@@ -299,10 +315,11 @@ LHCb (prev)   &  $10.2660 \pm 0.0060$       & $10.535 \pm 0.0100$\\ \hline
 \frametitle{Summary}
 \begin{enumerate}
 \item LHCb trigger allows to collect a huge sample of dimuon events.
-\item Profiling of High Level Trigger software at LHCb.
+\item Profiling High Level Trigger software at LHCb gives improvements in software performance and speed.
 \item Started studying the production of $\chi_b$ particles in LHCb, through the reconstruction of $\chi_b \rightarrow \Upsilon \gamma$ decays, with the $\Upsilon$ decaying to $\mu^+ \mu^-$.
-I did a reconstruction and counted the number of events of $\chi_b$ events from $\Upsilon(1S)$ decays.
-\item Made a  measurement of the mass and width of the $\chi_b(3P)$ state, which has been recently observed at LHC and the TeVatron.
+\item Determined $\chi_b \rightarrow \Upsilon(1S) \gamma$ yields as a function of $p_{T}(\Upsilon(1S))$.
+\item Measured  mass of the $\chi_b(3P)$ state, which has been recently observed at LHC and TeVatron.
+\item Finalize analysis (efficiencies, other decays,...) in a few months timescale.
 \end{enumerate}
 \end{frame}
 

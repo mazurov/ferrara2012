@@ -24,5 +24,6 @@ SET(IMAGES images/me.png
     images/mumu.png
     images/ups.png
     images/hlt_struct.png
+    images/hlt_struct1.png
     )
 ADD_LATEX_DOCUMENT(mazurov-ferrara2012.tex INPUTS ${INCLUDES} IMAGES ${IMAGES} DEFAULT_PDF)
